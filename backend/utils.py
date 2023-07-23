@@ -1,19 +1,19 @@
-from datetime import timedelta, datetime
-import re
+from datetime import timedelta, datetime, date
+# import re
 from functools import wraps
 from time import sleep
-from backend.myTypes import WhatsAppGroupConfig
+# from myTypes import WhatsAppGroupConfig
 
 
 MONTH = 30
-MONTH_PRICE = 3200
+MONTH_PRICE = 22_000
 
 
 def get_current_date():
-    datetime.now()
+    return datetime.today()
 
 
-def add_days(day: int, date: datetime) -> datetime:
+def add_days(day: int, date: str) -> datetime:
     return date + timedelta(days=int(day))
 
 
